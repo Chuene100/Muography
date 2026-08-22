@@ -1,0 +1,8 @@
+/run/initialize
+/vis/open TSGX11ZB 900x700-0+0
+/vis/drawVolume
+/vis/viewer/set/viewpointThetaPhi 70 20
+/vis/scene/add/trajectories smooth
+/tracking/storeTrajectory 1
+/vis/scene/endOfEventAction accumulate
+/run/beamOn 25

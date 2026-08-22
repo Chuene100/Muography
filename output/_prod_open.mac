@@ -1,0 +1,8 @@
+/run/initialize
+/paul/gen/eMin 0.5 GeV
+/paul/gen/eMax 2000 GeV
+/paul/gen/spectrum gaisser
+/paul/output/file output/open_sky_500k.dat
+/run/beamOn 500000
+/paul/output/close
+exit

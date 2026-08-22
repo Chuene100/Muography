@@ -1,0 +1,9 @@
+*** New data set for gamma conversion integral cross section ***
+*** by S. Incerti
+*** 29/01/2012
+
+-> converted from $G4LEDATA/pair files (version 6.23 and anterior)
+
+-> conversion performed using the convert.C ROOT macro
+
+-> column units are Geant4 internal units: MeV (1st column) and mm*mm (2nd column)

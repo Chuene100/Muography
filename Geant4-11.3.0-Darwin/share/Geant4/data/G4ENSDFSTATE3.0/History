@@ -1,0 +1,49 @@
+
+*****************************************************************************
+               History file for ENSDFSTATE file
+     Please update in reverse chronological order (latest change first)
+*****************************************************************************
+
+Version 3.0 (September 2024)  Laurent Desorgher
+------------------------------------------
+New version compliant with ENSDF data from March 2024
+
+Version 2.3 ( October 2020)  Laurent Desorgher
+------------------------------------------
+Correct GD158 to be compliant with PhotonEvaporation5.6 Database.
+
+Version 2.2 (5 September 2017)  Laurent Desorgher
+------------------------------------------
+Correct some levels to be compliant with PhotonEvaporation5.1 Database.
+
+Version 2.1 (4 November 2016)  Laurent Desorgher
+------------------------------------------
+Set Spin of excited levels as in PhotonEvaporation Database.
+
+Version 2 (16 September 2016)  Laurent Desorgher
+------------------------------------------
+Adding floating level information as -,+X,+Y,+Z,... string
+
+
+Version 1.3.1 (May 2016)  Laurent Desorgher
+------------------------------------------
+Bug corrections:
+add  missing data for AC225, SI25, 193RN,TE140
+
+
+Version 1.3 (February 2016)  Laurent Desorgher
+------------------------------------------
+Bug corrections:
+add  missing data for RA228, SI24
+
+Version 1.2 (November 2015)  Laurent Desorgher
+------------------------------------------
+- Update state data based on ENSDF 2015 February.
+
+Version 1.1 (November 2014)  Tatsumi Koi. L. Desorgher
+------------------------------------------
+Fix missing ground state of Cl35
+Fix duplicated entry for ground state of 21N
+Fix format disorder in ground state of 223Rn
+
+Version 1.0 first Release

@@ -1,0 +1,36 @@
+.......................................................
+..................ESTAR................................
+.......................................................
+
+Database has been copied from 
+http://physics.nist.gov/PhysRefData/Star/Text/ESTAR-t.html
+on September 2013 by A.Ivantchenko during the R&D ESA/ESTEC project A07146,
+BioRad-II.
+Some inconviences refer to antoni@cern.ch, vnivanch@cern.ch
+
+***************************************************************
+
+2. ESTAR: Stopping Powers and Ranges for Electrons
+Access the ESTAR Database
+http://physics.nist.gov/PhysRefData/Star/Text/method.html
+
+:::::::::::::::::::::::::::::Directory estar-basic::::::::::::::::::::::
+each file has 7 couloms: 
+    0   Energies in MeV and are in the range from 0.01 MeV to 1000 MeV.
+    1  	Collision stopping power, MeV*cm2/g;
+    2  	Radiative stopping power, MeV*cm2/g;
+    3  	Total stopping power (sum of a and b), MeV*cm2/g;
+    4  	Density effect parameter "delta"; 
+    5  	CSDA (continuous-slowing-down approximation) range, g/cm2;
+    6  	Radiation yield (fraction of kinetic energy of primary electron converted 
+        into bremsstrahlung). 
+81 lines per sample
+
+::::::::::::::::::::::::::::::Directory estar-long:::::::::::::::::::::::
+each file has 5 couloms: 
+    0   Energies in MeV and are in the range from .001 MeV to 10000 MeV. 
+    1   collision stopping power, MeV cm2/g
+    2   radiative stopping power, MeV cm2/g
+    3   total stopping power, MeV cm2/g
+    4   density effect parameter delta
+97 lines per sample

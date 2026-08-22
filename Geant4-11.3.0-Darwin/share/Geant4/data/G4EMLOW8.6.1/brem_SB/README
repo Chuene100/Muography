@@ -1,0 +1,20 @@
+Low Energy Electromagnetic models data files
+============================================
+
+    *********************************************************************
+    * DATA ARE *NOT* FOR COMMERCIAL USE AND MUST BE USED WITHIN GEANT4  *
+    *********************************************************************
+
+========================================================================= 
+
+Directory Description
+=====================
+
+
+*** Seltzer-Berger data for bremsstrahlung cross section ***
+    Atom. Data and Nucl. Data Tables 35 (1986) 345-418
+
+   brZZ       = cross sections per element (Z=1-100) in a format of 2-D
+                vector which can directly retrieved by G4Physics2DVector
+                class; 
+

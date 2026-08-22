@@ -1,0 +1,144 @@
+Low Energy Electromagnetic models data files
+============================================
+
+    *********************************************************************
+    * DATA ARE *NOT* FOR COMMERCIAL USE AND MUST BE USED WITHIN GEANT4  *
+    *********************************************************************
+
+========================================================================= 
+
+Directory Description
+=====================
+
+livermore: photon data that are based on EPDL97/EPICS2014 
+
+*** Photon processes ***
+
+==========================  
+Gamma conversion (pair): pair + triplet production
+
+G4LivermoreGammaConversionModel, G4LivermoreGammaConversion5DModel
+
+description   directory             file name      file type                                 database     interpolation
+              livermore/pair        pp-cs-NN.dat   gamma conversion cross sections(sum)      EPDL97       spline(same as version Geant4 10.6)
+
+Each pp-cs-NN.dat is composed of two header lines and a data table 
+
+               column 1                 column 2         column  3
+  line 1:      minimal energy           maximal energy   number of data lines
+  line 2:      number of data lines  
+  data line:   energy (MeV)             CS (mm2)
+  data line:
+  data line:
+  ...
+  
+NB:interpolation is the interpolation method when calculating the cross section according to the tabulated data
+  
+The following data files in livermore directory are not read by model classes:	
+	  
+description   directory             file name           file type                            database     
+              livermore/pairdata    pp-pair-cs-NN.dat   pair production cross sections       EPDL97       
+              livermore/tripdata    pp-trip-cs-NN.dat   triplet production cross sections    EPDL97       
+
+========================== 
+
+Compton effect (comp):
+
+G4LivermoreComptonModel
+
+description   directory             file name      file type           database     interpolation
+              livermore/comp        ce-cs-NN.dat   cross sections      EPDL97       linear(same as version Geant4 10.6)
+
+Each ce-cs-NN.dat is composed of two header lines and a data table 
+
+               column 1               column 2          column  3
+  line 1:      minimal energy         maximal energy    number of data lines
+  line 2:      number of data lines
+  data line:   energy (MeV)           energy*CS(MeV*barn)
+  data line:
+  data line:
+  ...
+  
+NB:
+(1) interpolation is the interpolation method when calculating the cross section according to the tabulated data
+In consistency with Geant4 10.6, linear is adopted when using EPDL97 
+(2) the 2rd column of data lines is the production of energy and cross section, instead of pure cross section
+  
+========================== 
+
+Photoelectric effect (phot): 
+ 
+G4LivermorePhotoElectricModel
+
+description   directory                   file name         file type                                            database     interpolation
+              livermore/phot_epics2014    pe-cs-NN.dat      total cross sections above K shell binding energy    EPICS2014    spline (same as version Geant4 10.6)
+              livermore/phot_epics2014    pe-le-cs-NN.dat   total cross sections below K shell binding energy    EPICS2014    linear (same as version Geant4 10.6)
+              livermore/phot_epics2014    pe-high-NN.dat    high fitting parameters for subshell cross sections  EPICS2014    
+              livermore/phot_epics2014    pe-low-NN.dat     low fitting parameters for subshell cross sections   EPICS2014
+              livermore/phot_epics2014    pe-ss-cs-NN.dat   subshell cross sections                              EPICS2014			
+ pe-cs-NN.dat and pe-le-cs-NN.dat have save structure, each file is composed of two header lines and a data table 
+
+               column 1               column 2                                      column 3
+  line 1:      minimal energy         maximal energy                                number of data lines
+  line 2:      number of data lines
+  data line:   energy (MeV)           energy*energy*energy*CS (MeV*MeV*MeV*barn)
+  data line:
+  data line:
+  ...
+  
+NB:
+(1) data in livermore directory are based on EPICS2014
+(2) interpolation is the interpolation method when calculating the cross section according to the tabulated data
+In consistency with Geant4 10.6, linear is adopted when using EPICS2014
+(3) the 2rd column of data lines is the production of cube of energy and cross section, instead of pure cross section
+   
+   
+pe-high-NN.dat and pe-low-NN.dat have same structure
+
+                 column 1              column 2                          column 3
+   line 1:       number of subshell    number of subshell                low or high energy limit
+   
+                 column 1              column 2-7
+   line 2:       1st binding energy    low or high fitting parameters
+   line 3:       2nd binding energy    low or high fitting parameters
+   line 4:       
+   ...
+
+
+Each pe-ss-cs-NN.dat file is composed of several data tables, the number of data tables corresponds to the number of subshells
+Each data table has same structure
+
+                 column 1            column 2                                      column 3                column 4 
+   line 1:       minimal energy      maximal energy                                number of data lines    subshell index
+   data line:	 energy (MeV)        energy*energy*energy*CS (MeV*MeV*MeV*barn)	
+   data line:
+   data line:
+   ...
+ 
+NB: 
+(1) subshell index starts from 0 to S-1, S is the number of subshells
+(2) the 2rd column of data lines is the production of cube of energy and cross section, instead of pure cross section
+
+========-================== 
+
+Rayleigh scattering (rayl):
+
+G4LivermoreRayleighModel
+
+description   directory         file name      file type         database     interpolation
+              livermore/rayl    re-cs-NN.dat   cross sections    EPDL97       linear (same as version Geant4 10.6)
+
+Each re-cs-NN.dat is composed of two header lines and a data table 
+
+               column 1            column 2                        column  3
+  line 1:      minimal energy      maximal energy                  number of points
+  line 2:      number of points
+  data line:   energy (MeV)        energy*energy*CS (MeV*MeV*mm2)
+  data line:
+  data line:
+  ...
+  
+NB:
+(1) interpolation is the interpolation method when calculating the cross section according to the tabulated data
+In consistency with Geant4 10.6, linear is adopted when using EPDL97
+(2) the 2rd column of data lines is the production of square of energy and cross section, instead of pure cross section

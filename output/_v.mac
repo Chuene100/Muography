@@ -1,0 +1,9 @@
+/run/initialize
+/paul/gen/spectrum mono
+/paul/gen/monoEnergy 100 GeV
+/paul/gen/thetaMax 70 deg
+/paul/rock/enabled true
+/paul/rock/setThickness 50 m
+/tracking/verbose 1
+/run/beamOn 2
+exit

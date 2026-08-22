@@ -1,0 +1,10 @@
+/run/initialize
+/paul/gen/spectrum mono
+/paul/gen/monoEnergy 100 GeV
+/paul/gen/thetaMax 70 deg
+/paul/rock/enabled true
+/paul/rock/setThickness 50 m
+/paul/output/file output/val_100gev_50m.dat
+/run/beamOn 20000
+/paul/output/close
+exit

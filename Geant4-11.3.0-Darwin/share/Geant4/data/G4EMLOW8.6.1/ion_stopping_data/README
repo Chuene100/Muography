@@ -1,0 +1,36 @@
+Low Energy Electromagnetic models data files
+============================================
+
+    *********************************************************************
+    * DATA ARE *NOT* FOR COMMERCIAL USE AND MUST BE USED WITHIN GEANT4  *
+    *********************************************************************
+
+========================================================================= 
+
+Directory Description
+=====================
+
+*** Ion stopping powers ***
+
+The same format for ICRU73 and ICRU90 data.
+ 
+   zZZ_MAT.dat       = mass stopping powers from ICRU 73 tables and revised
+                       tables provided by P. Sigmund/Univ. of Southern Denmark
+                       (revised tables are: G4_WATER (all considered ions), 
+                       G4_WATER_VAPOR (all considered ions), G4NYLON-6-6
+                       (F ions), G4_Cu (all considered ions))
+
+                       File name definition:
+                         * Elemental targets: zZZ_YY.dat
+                                               ZZ = ion atomic number
+                                               YY = atomic number of material
+                         * Compound materials: zZZ_NAME.dat
+                                               ZZ = ion atomic number
+                                               YY = material name 
+
+                       File content:
+                         Format readable by G4LPhysicsFreeVector, data in
+                         ICRU 73 units:
+                           1st column: Energy per nucleon in MeV
+                           2nd column: Mass stopping power in MeV*cm2/(mg)
+

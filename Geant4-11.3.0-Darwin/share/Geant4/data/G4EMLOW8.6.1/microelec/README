@@ -1,0 +1,42 @@
+Low Energy Electromagnetic models data files
+============================================
+
+    *********************************************************************
+    * DATA ARE *NOT* FOR COMMERCIAL USE AND MUST BE USED WITHIN GEANT4  *
+    *********************************************************************
+
+========================================================================= 
+
+Directory Description
+=====================
+
+
+*** Microelec processes ***
+
+All files are located in the microelec directory.
+
+If you use these processes, please cite:
+
+A. Valentin, M. Raine and J.-E. Sauvestre, 
+"Inelastic cross-sections of low-energy electrons in silicon for the 
+simulation of heavy ion tracks with the GEANT4-DNA toolkit",  
+http://dx.doi.org/10.1109/NSSMIC.2010.5873720
+
+A. Valentin, M. Raine, J.-E. Sauvestre, M. Gaillardin and P. Paillet, 
+"Geant4 physics processes for microdosimetry simulation: very low energy 
+electromagnetic models for electrons in silicon", 
+Nuclear Instruments and Methods in Physics Research B, vol. 288, pp. 66 - 73, 2012. 
+http://dx.doi.org/10.1016/j.nimb.2012.07.028
+
+A. Valentin, M. Raine, M. Gaillardin and P. Paillet, 
+"Geant4 physics processes for microdosimetry simulation: very low energy 
+electromagnetic models for protons and heavy ions in silicon", 
+Nuclear Instruments and Methods in Physics Research B, vol. 287, pp. 124 - 129, 2012. 
+http://dx.doi.org/10.1016/j.nimb.2012.06.007
+
+M. Raine, A. Valentin, M. Gaillardin and P. Paillet, 
+"Improved simulation of ion track structures using new Geant4 models 
+- Impact on the modeling of advanced technologies response ", 
+IEEE Transactions on Nuclear Science, vol. 59, pp. 2697 - 2703, 2012. 
+http://dx.doi.org/10.1109/TNS.2012.2220783
+

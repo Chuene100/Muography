@@ -1,0 +1,10 @@
+/run/initialize
+/paul/gen/eMin 0.5 GeV
+/paul/gen/eMax 2000 GeV
+/paul/gen/spectrum gaisser
+/paul/rock/enabled true
+/paul/rock/setThickness 200 m
+/paul/output/file output/depth_200m_500k.dat
+/run/beamOn 500000
+/paul/output/close
+exit

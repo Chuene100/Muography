@@ -1,0 +1,131 @@
+Low Energy Electromagnetic models data files
+============================================
+
+    *********************************************************************
+    * DATA ARE *NOT* FOR COMMERCIAL USE AND MUST BE USED WITHIN GEANT4  *
+    *********************************************************************
+
+========================================================================= 
+
+Directory Description
+=====================
+
+*** Photon processes ***
+
+compton effect (comp):
+
+   ce-cs-NN.dat      = integral cross sections    (EPDL97)
+   ce-sf-NN.dat      = scattering functions       (EPDL97)
+
+gamma conversion (pair): pair + triplet production, interpolated and summed
+
+   pp-cs-NN.dat      = integral cross sections    (EPDL97)
+
+gamma conversion (pairdata): pair production
+
+   pp-pair-cs-NN.dat = integral cross sections    (EPDL97)
+
+gamma conversion (tripdata ): triplet production
+
+   pp-trip-cs-NN.dat = integral cross sections    (EPDL97)
+
+photoelectric effect (phot): 
+ 
+   pe-cs-NN.dat      = integral cross sections    (EPDL97) 
+   pe-ss-cs-NN.dat   = subshell cross sections    (EPDL97)
+
+   (updated versions of these files from EPICS2014 are in the livermore dir.)
+
+rayleigh effect (comp):
+
+   re-cs-NN.dat      = integral cross sections    (EPDL97)
+   re-ff-NN.dat      = form factors               (EPDL97)
+
+gamma elastic scattering (in JAEAESData/):
+
+   details in JAEAESData/README
+
+*** Electron/positron processes ***
+
+
+ionisation (ioni):
+
+   details inside ioni/README
+
+bremstrahlung (brem):
+
+   br-cs-NN.dat      = integral cross sections                        (EEDL)   
+   br-co-a.dat       = photon energy spectrum formula coefficient     (EEDL)  (+)
+   br-co-b.dat       = photon energy spectrum formula coefficient     (EEDL)  (+)
+
+bremsstarhlung (brem_SB):
+
+   details inside brem_SB/README
+
+multiple scattering (msc_GS)
+
+   details inside msc_GS/README
+
+*** Ion processes ***
+
+   details inside ion_stopping_data/README
+   
+*** Atomic relaxation ***
+
+fluorescence (fluor):
+
+   fl-tr-pr-NN.dat   = radiative transition probabilities (EADL)
+   binding.dat       = binding energies (EADL)  
+
+fluorescence based on Bearden data (fluor_Bearden), by Stephane Paltani:
+
+   fl-tr-pr-NN.dat   = radiative transition probabilities (from Bearden)
+   fl-tr-pr-NN.commented.dat = same including comments (from Bearden)
+   binding.dat       = binding energies (EADL)  
+
+fluorescence based on XDB & EADL data (fluor_XDB_EADL), by Dennis Wright:
+
+   fl-tr-pr-NN.dat   = radiative transition probabilities (EADL)
+   binding.dat       = binding energies (XDB & EADL)  
+
+auger effect (auger):
+   au-tr-pr-NN.dat   = non-radiative transition probabilities (EADL)
+
+* NN = ATOMIC NUMBER
+
+*** Geant4-DNA processes ***
+
+   details inside dna/README
+
+*** Microelec processes ***
+
+   details inside microelec/README
+
+*** PIXE data files ***
+
+   details inside pixe/README
+
+*** X-Ray reflection data files ***
+
+   details inside XRayReflection_data/README
+
+================================================================================
+
+Photoelectric Angular Majorant Surface Directory Description
+
+photoelectric angular majorant surface distribution (photoelectric_angular)
+
+ftab0.dat <- Majorant surface distribution for K-shell
+ftab1.dat <- Majorant surface distribution for L-shells
+
+================================================================================
+
+The cited Livermore data libraries are:
+
+-- EPDL97  Evaluated Photon Data Library 
+-- EEDL    Evaluated Electron Data Library 
+-- EADL    Evaluated Atom Data Library
+
+(see http://www.llnl.gov/cullen1/)
+
+

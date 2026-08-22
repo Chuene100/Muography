@@ -1,0 +1,18 @@
+*** 
+*** New data set for Rayleigh scattering 
+*** integral cross section (CS) and form factor (FF)
+***
+*** by S. Incerti
+*** 31/03/2012
+
+-> converted from $G4LEDATA/rayl files (version 6.23 and anterior)
+
+-> conversion performed using the convertCS.C and convertFF.C ROOT macros
+
+-> for CS files: column units are Geant4 internal units: MeV (1st column) 
+    and mm*mm (2nd column)
+    Note that CS files were limited up to 10 MeV; 
+    E^-2 extraploation is performed above maximum energy of each CS file
+
+-> for FF files: column units are : no unit (1st column is x) 
+    and no unit (2nd column is FF)

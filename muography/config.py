@@ -1,0 +1,25 @@
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+DATA_FILE = PROJECT_ROOT / "PAUL_UWC_CALIB2_12APR2024-0.dat"
+FIG_DIR = PROJECT_ROOT / "analysis" / "figures"
+RESULTS_DIR = PROJECT_ROOT / "results"
+MODELS_DIR = PROJECT_ROOT / "results" / "models"
+SIM_OPEN_SKY = PROJECT_ROOT / "muon-sim" / "output" / "open_sky.dat"
+
+N_PLANES = 3
+N_STRIPS = 64
+STRIP_PITCH_MM = 10.0
+PLANE_SPACING_MM = 300.0
+PLANE_Z_MM = [0.0, PLANE_SPACING_MM, 2.0 * PLANE_SPACING_MM]
+PLANE_VIEW = {0: "x", 1: "y", 2: "x"}
+
+FINE_UNIT_NS = 10.0
+COINC_WINDOW_FINE = 20
+ADC_MAX = 4095
+MIN_HITS_PER_PLANE_ROW = 2
+
+UNDERGROUND_RATE_PER_DAY = 5.0
+UNDERGROUND_DAYS = 5.0
+
+ROCK_DENSITY_G_CM3 = 2.65

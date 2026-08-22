@@ -1,0 +1,4 @@
+/run/initialize
+/paul/output/file output/open_sky.dat
+/run/beamOn 100000
+/paul/output/close

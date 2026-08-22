@@ -1,0 +1,44 @@
+Low Energy Electromagnetic models data files
+============================================
+
+    *********************************************************************
+    * DATA ARE *NOT* FOR COMMERCIAL USE AND MUST BE USED WITHIN GEANT4  *
+    *********************************************************************
+
+========================================================================= 
+
+Directory Description
+=====================
+
+elastic scattering (in JAEAESData/):
+
+   All data available from: http://dx.doi.org/10.11484/jaea-data-code-2018-007
+
+   These are new data set for the elastic scattering of gamma rays
+   Data are used by the JAEAElasticScattering Model
+   Cross section are for Rayleigh + nuclear Thomson + Delbrück scatterings  
+    - Rayleigh amplitudes: Second order scattering matrix.
+    - Nuclear Thomson amplitudes: Analytical.
+    - Delbrück amplitudes: First order Born approximation.
+   by. M. Omer and R. Hajima (15/1/2018)
+
+   Integrated and differential cross section data files: cs_Z_NN.dat.
+   NN = atomic number.
+   Each file is 183 columns * 300 rows.
+   Row 1 = Energy in keV.
+   Row 2 = Integrated cross section in barn.
+   Row 3 ~ 183 differential cross section at angles from 0 degree to 180 degree at the energy 
+           of the corresponding first column in barn/sr.	
+
+   Note: 
+   1. Cross section data are limited to 3 MeV.
+   2. The folder JAEAESDATA must be copied to 
+      ~path-to-geant4-install/share/Geant4-10.X.0/data/G4EMLOW7.3
+      Geant4 version and G4EMLOW data might be different from above 
+      depending on the installed versions.
+   3. This process is only valid for unpolarized gamma radiation.
+
+   If you use JAEAElasticScattering process, please cite:
+   M. Omer and R. Hajima, "Including Delbrück Scattering in GEANT4",  
+    https://doi.org/10.1016/j.nimb.2017.05.028
+

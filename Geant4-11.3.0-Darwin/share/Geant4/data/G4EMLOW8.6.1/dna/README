@@ -1,0 +1,54 @@
+Low Energy Electromagnetic models data files
+============================================
+
+    *********************************************************************
+    * DATA ARE *NOT* FOR COMMERCIAL USE AND MUST BE USED WITHIN GEANT4  *
+    *********************************************************************
+
+========================================================================= 
+
+Directory Description
+=====================
+
+*** Geant4-DNA processes ***
+
+If you use the Geant4-DNA extension, please cite the following reference papers:
+
+- Geant4-DNA example applications for track structure simulations in liquid water: a report from the Geant4-DNA Project, S. Incerti, I. Kyriakou, M. A. Bernal, M. C. Bordage, Z. Francis, S. Guatelli, V. Ivanchenko, M. Karamitros, N. Lampe, S. B. Lee, S. Meylan, C. H. Min, W. G. Shin, P. Nieminen, D. Sakata, N. Tang, C. Villagrasa, H. Tran, J. M. C. Brown, Med. Phys. 45 (2018) e722-e739
+
+- Track structure modeling in liquid water: A review of the Geant4-DNA very low energy extension of the Geant4 Monte Carlo simulation toolkit, M. A. Bernal, M. C. Bordage, J. M. C. Brown, M. Davídková, E. Delage, Z. El Bitar, S. A. Enger, Z. Francis, S. Guatelli, V. N. Ivanchenko, M. Karamitros, I. Kyriakou, L. Maigne, S. Meylan, K. Murakami, S. Okada, H. Payno, Y. Perrot, I. Petrovic, Q.T. Pham, A. Ristic-Fira, T. Sasaki, V. Štěpán, H. N. Tran, C. Villagrasa, S. Incerti, Phys. Med. 31 (2015) 861-874 (link)
+
+- Comparison of Geant4 very low energy cross section models with experimental data in water, S. Incerti, A. Ivanchenko, M. Karamitros, A. Mantero, P. Moretto, H. N. Tran, B. Mascialino, C. Champion, V. N. Ivanchenko, M. A. Bernal, Z. Francis, C. Villagrasa, G. Baldacchino, P. Guèye, R. Capra, P. Nieminen, C. Zacharatou, Med. Phys. 37 (2010) 4692-4708 (link)
+
+- The Geant4-DNA project, S. Incerti, G. Baldacchino, M. Bernal, R. Capra, C. Champion, Z. Francis, S. Guatelli, P. Guèye, A. Mantero, B. Mascialino, P. Moretto, P. Nieminen, A. Rosenfeld, C. Villagrasa and C. Zacharatou, Int. J. Model. Simul. Sci. Comput. 1 (2010) 157–178
+
+Please refer to http://geant4-dna.org for more details about data and associated publications.
+
+*** Geant4-DNA multi-ionisation processes ***
+
+The cross-section values of multiple-ionization processes are computed 
+based on those of existing single-ionization for a given particle 
+using scale parameters. 
+
+The following files are scale parameters, which are called 'alpha parameter' 
+in the reference paper (J. Meesungnoen, et al., DOI:10.1021/jp058037z), for a given particle.
+Each file has two columns. The first column shows ion energy (in MeV) per nucleon 
+divided by the projectile charge state (E_ion/Z). The second column is an alpha parameter.
+
+- multipleionisation_alphaparam_p.dat (for protons)
+
+- multipleionisation_alphaparam_alphaplusplus.dat (for alpha++)
+
+- multipleionisation_alphaparam_c.dat (for carbon ions)
+
+- multipleionisation_alphaparam_champion.dat (for various ions, reported by C.Champion, DOI: 10.1016/S0168-583X(03)00585-8)
+
+The cross-section value is computed for each process as follows:
+- sigma(d) = alpha * sigma(s) 
+- sigma(t) = alpha^2 * sigma(s)
+- sigma(q) = alpha^3 * sigma(s)
+Here, sigma(d), sigma(t), and sigma(q) are cross-section values for double-, triple-, 
+and quadruple-ionization, respectively. Sigma(s) is a cross-section for single-ionization, 
+which is referred from G4DNARuddIonisationExtendedModel for a given particle. 
+Alpha is an alpha parameter.
+

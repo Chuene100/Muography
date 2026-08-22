@@ -1,0 +1,5 @@
+/run/initialize
+/paul/output/file output/open_sky_smoke.dat
+/run/beamOn 2000
+/paul/output/close
+exit

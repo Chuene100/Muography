@@ -1,0 +1,17 @@
+Data file for G4NuclideTable.
+Properties of each state are introduced from Evaluated Nuclear Structure Data File (ENSDF) 
+States  with zero life time  in ENSDF are not considered  but are given in PhotoEvaporationData
+
+An example of state
+
+6   14          6728.2  0      0.09521787    6    4.12143936e-27
+and format of each enetry is 
+1:Z
+2:A
+3:Excitation energy [keV]
+4: String for floating levels -,+X,+Y,+Z,+U,+V,+W,.. 
+   - means not floating level
+5:Mean life time [ns] 
+6:J [h_bar/2]
+7:Dipole magnetic moment [joule/tesla]
+

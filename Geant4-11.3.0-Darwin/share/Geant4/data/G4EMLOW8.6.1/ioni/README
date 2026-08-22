@@ -1,0 +1,75 @@
+Low Energy Electromagnetic models data files
+============================================
+
+    *********************************************************************
+    * DATA ARE *NOT* FOR COMMERCIAL USE AND MUST BE USED WITHIN GEANT4  *
+    *********************************************************************
+
+========================================================================= 
+
+Directory Description
+=====================
+
+*** Electron process ***
+
+ionisation (ioni):
+
+   ion-ss-cs-NN.dat   = subshell cross sections
+
+   ion-co-NN.dat      = delta ray energy spectrum formula coefficient (EEDL)  (+)
+   io-co-NN.dat       = delta ray energy spectrum formula coefficient (EEDL)  (+)
+
+coefficient for ionisation are obtained fitting delta ray spectrum with two functions
+
+   * ion-co-NN.dat structure 
+
+		column     type of data
+
+		  1         incoming electron energy
+
+                 2-7        first formula coefficients sum_i(A_i/(Energy+Binding)^i)
+
+                  8         second formula coefficient  C_i/Energy^2
+
+                  9         maximum of the rejection part of the first formula: 
+                            sum_i(A_i/(Energy+Binding)^(i-1))
+
+                10-11       subarea1 and subarea2 covered by the two formulas
+
+		 12         separation cut 	    			
+
+   * io-co-NN.dat structure (new fits with up to three functions)
+
+		column     type of data
+
+		  1         incoming electron energy
+
+                 2-7        first formula coefficients sum_i(A_i/(Energy+Binding)^i) i=2,7
+
+                  8         maximum of the rejection part of the first formula: 
+                            sum_i(A_i/(Energy+Binding)^(i-1))
+
+                 9-12       third formula coefficients sum_i(A_i/(Energy+Binding)^i) i=2,5
+
+                 13         maximum of the rejection part of the first formula: 
+                            sum_i(A_i/(Energy+Binding)^(i-1))
+
+		14-15       second formula coefficient: C1*Energy^C2 
+
+		 16         1st separation cut 	    			
+
+		 17         2nd separation cut 	    			
+
+each set of data in a file corresponding to subshells is separated by a line of -1.
+The order of the functions 1st,2nd,3rd follows the increasing energy in which they are used
+even if the second formula is the less used. (see Physics Reference Manual)
+   
+The cited Livermore data library is:
+
+-- EEDL    Evaluated Electron Data Library 
+
+(see http://www.llnl.gov/cullen1/)
+
+-- The data have been reformatted for usage in Geant4 and the files(+) 
+contain values resulting from fitting the original data. 
+

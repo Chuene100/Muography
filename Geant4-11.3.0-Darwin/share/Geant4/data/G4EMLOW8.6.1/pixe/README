@@ -1,0 +1,27 @@
+Low Energy Electromagnetic models data files
+============================================
+
+    *********************************************************************
+    * DATA ARE *NOT* FOR COMMERCIAL USE AND MUST BE USED WITHIN GEANT4  *
+    *********************************************************************
+
+========================================================================= 
+
+Directory Description
+=====================
+
+*** PIXE data files ***
+
+All cross section data files needed for PIXE with protons and alphas are stored in the
+ecpssr, uf, kpcsPaul, kacsPaul and exp directories located in the pixe directory.
+
+* Data in the pixe/ecpssr subdirectory are derived from the work of :
+
+- A. Taborda et al.,
+"Polynomial approximation to universal ionisation cross-sections of K and L shells induced by H and He ion beams"
+Published in X-Ray Spectrom. 2011, 40, 127-134
+
+- A. Taborda et al.,
+"Polynomial approximation to universal M-shell ionisation cross sections"
+Published in X-Ray Spectrom. 2013, 42, 177-182
+

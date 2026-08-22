@@ -1,0 +1,50 @@
+{
+  "run": {
+    "file": "PAUL_UWC_CALIB2_12APR2024-0.dat",
+    "start_utc": "2024-04-12T15:15:34+00:00",
+    "span_min": 10.0,
+    "n_events": 8420,
+    "rate_hz": 14.033333333333333,
+    "rate_per_hour": 50520.0,
+    "rate_per_day": 1212480.0
+  },
+  "angular": {
+    "n_valid_tracks": 8420,
+    "note": "chi2 vs cos^2 shape scaled to data within acceptance (ct>0.55); absolute angles assume 300 mm plane spacing",
+    "cos2_chi2": 1841.69291380345,
+    "n_cos_bins": 15,
+    "theta_mean_deg": 27.785765410723393,
+    "theta_median_deg": 28.80708078516224,
+    "theta_max_deg": 49.71715712291863
+  },
+  "unsupervised": {
+    "contamination": 0.05,
+    "n_anomalous": 421,
+    "score_threshold_p95": 0.5381009067873179
+  },
+  "clean_fraction": {
+    "n_clean": 7713,
+    "fraction": 0.9160332541567696
+  },
+  "classifier": {
+    "auc": 0.9999372130533892,
+    "noise_flagged_fraction": 0.0,
+    "muon_flagged_fraction": 1.0,
+    "n_train": 11293,
+    "n_test": 4840
+  },
+  "overburden": {
+    "underground_rate_per_day_assumed": 5.0,
+    "open_rate_per_day_measured": 1212480.0,
+    "transmission_ratio": 4.123779361309053e-06,
+    "depth_mwe_exact_model": 651.2269781787451,
+    "depth_mwe_ml_surrogate_integrated": 653.0504416376057,
+    "depth_band_mwe_poisson": [
+      704.5420603826376,
+      610.4407372555735
+    ],
+    "meters_rock_at_2.65gcc": 245.74602950141323,
+    "relative_rate_uncertainty": 0.2,
+    "model_note": "flat-overburden Gaisser spectrum + Groom range-energy in standard rock; 5 events/day underground figure provided by collaboration"
+  }
+}

@@ -1,0 +1,18 @@
+W 74
+
+1 WorkFunction eV 4.55
+1 EnergyGap eV 0
+14 EnergyPeak eV 1.5 2.6 4.2 9.5 15 24 30 42 51 90 220 2000 10000 76000
+14 EnergyLimit eV 1 1 1 1 1 1 1 1 1 50 70 2000 10000 75000
+#14 EADL noUnit -1 -1 -1 -1 -1 -1 -1 30 29 27 22 11 6 1 corresponding G4shell defined as follow -1 -1 -1 -1 -1 -1 -1 18 17 16 13 6 3 0 below correction ot enable Augers for weakly bound electrons
+14 EADL noUnit -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 6 3 0
+14 WeaklyBoundShell noUnit 1 1 1 1 1 1 1 0 0 0 0 0 0 0
+
+1 WeaklyBoundInitialEnergy eV 4.00
+
+1 DielectricModelLowEnergyLimit_e eV 1.1
+1 DielectricModelHighEnergyLimit_e MeV 1e-2
+1 DielectricModelLowEnergyLimit_p eV 100
+1 DielectricModelHighEnergyLimit_p MeV 10
+1 ElasticModelLowEnergyLimit eV 1.1
+1 ElasticModelHighEnergyLimit eV 5e5

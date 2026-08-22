@@ -1,0 +1,10 @@
+/run/initialize
+/paul/gen/eMin 0.5 GeV
+/paul/gen/eMax 2000 GeV
+/paul/gen/spectrum gaisser
+/paul/rock/enabled false
+
+/paul/output/file output/depth_0m.dat
+/run/beamOn 50000
+/paul/output/close
+exit

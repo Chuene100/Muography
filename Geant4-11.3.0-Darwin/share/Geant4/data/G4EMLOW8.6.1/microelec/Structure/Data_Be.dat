@@ -1,0 +1,21 @@
+Be 4
+
+1 WorkFunction eV 4.98
+1 EnergyGap eV 0
+
+2 EnergyPeak eV 18.4 118.36
+2 EnergyLimit eV 1 112
+#2 EADL noUnit -1 1 corresponding G4shell defined below
+2 EADL noUnit -1 0
+
+2 WeaklyBoundShell noUnit 1 0
+
+
+1 WeaklyBoundInitialEnergy eV 3.2
+
+1 DielectricModelLowEnergyLimit_e eV 1.1
+1 DielectricModelHighEnergyLimit_e MeV 1e-2
+1 DielectricModelLowEnergyLimit_p eV 100
+1 DielectricModelHighEnergyLimit_p MeV 10
+1 ElasticModelLowEnergyLimit eV 1.1
+1 ElasticModelHighEnergyLimit eV 5e5

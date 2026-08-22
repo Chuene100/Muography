@@ -1,0 +1,23 @@
+SiO2 Compound
+
+1 WorkFunction eV 0.9
+1 EnergyGap eV 8
+
+#Shell data
+6 EnergyPeak eV 11 24 50 130 580 2200
+6 EnergyLimit eV 8 12 15 115 530 1200
+# 6 EADL noUnit -1 -1 3 3 1 1 corresponding G4shell defined below
+6 EADL noUnit -1 -1 1 1 0 0
+6 WeaklyBoundShell noUnit 1 1 0 0 0 0
+
+6 ShellAtomicNumber noUnit 8 8 8 14 8 14
+
+1 WeaklyBoundInitialEnergy eV 8
+
+#Models energy limits
+1 DielectricModelLowEnergyLimit_e eV 8
+1 DielectricModelHighEnergyLimit_e MeV 1e-2
+1 DielectricModelLowEnergyLimit_p eV 100
+1 DielectricModelHighEnergyLimit_p MeV 10
+1 ElasticModelLowEnergyLimit eV 10
+1 ElasticModelHighEnergyLimit eV 5e5

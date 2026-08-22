@@ -1,0 +1,22 @@
+Al2O3 Compound
+
+1 WorkFunction eV 0.5
+1 EnergyGap eV 8.8
+
+#Shell data
+6 EnergyPeak eV 18 26.5 40 85 500 1540
+6 EnergyLimit eV 8.8 9 12 50 500 1500.2
+6 WeaklyBoundShell noUnit 1 1 1 0 0 0
+#6 EADL noUnit -1 -1 -1 3 1 1 #-1 for plasmon ,  corresponding G4shell defined below
+6 EADL noUnit -1 -1 -1 1 0 0
+6 ShellAtomicNumber noUnit 8 8 8 13 8 13
+
+1 WeaklyBoundInitialEnergy eV 0
+
+#Models energy limits
+1 DielectricModelLowEnergyLimit_e eV 8.8
+1 DielectricModelHighEnergyLimit_e MeV 1e-2
+1 DielectricModelLowEnergyLimit_p eV 100
+1 DielectricModelHighEnergyLimit_p MeV 10
+1 ElasticModelLowEnergyLimit eV 10
+1 ElasticModelHighEnergyLimit eV 5e5

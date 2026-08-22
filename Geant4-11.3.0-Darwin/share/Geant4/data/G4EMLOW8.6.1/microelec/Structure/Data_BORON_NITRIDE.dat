@@ -1,0 +1,21 @@
+BN Compound
+
+1 WorkFunction eV 4.5
+1 EnergyGap eV 5.2
+
+#Shell data
+8 EnergyPeak eV 8.65 19.0 25.2 35.8 51.0 65.0 181 409
+8 EnergyLimit eV 5.2 5.2 5.2 5.2 5.2 5.2 181 409
+8 WeaklyBoundShell noUnit 1 1 1 1 1 1 0 0
+8 EADL noUnit -1 -1 -1 -1 -1 -1 1 1 
+8 ShellAtomicNumber noUnit 5 7 5 7 5 7 5 7
+
+1 WeaklyBoundInitialEnergy eV 0
+
+#Models energy limits
+1 DielectricModelLowEnergyLimit_e eV 5.2
+1 DielectricModelHighEnergyLimit_e keV 10
+1 DielectricModelLowEnergyLimit_p eV 100
+1 DielectricModelHighEnergyLimit_p MeV 10
+1 ElasticModelLowEnergyLimit eV 4.5
+1 ElasticModelHighEnergyLimit eV 5e5
