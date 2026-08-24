@@ -54,7 +54,7 @@ Use `depth_*m.dat` as labelled muon samples across overburden thicknesses to
 retrain the transmission surrogate on simulated transport instead of the
 analytic model (`muography/ml_models.py`), and `open_sky.dat` as a pure-muon
 positive class for the muon/noise classifier.
-=======
+
 # Muography — Geant4 + ML underground muon-flux mapping
 
 Simulate cosmic-ray muons travelling through rock overburden with **Geant4**
