@@ -5,6 +5,6 @@
 /paul/rock/enabled false
 
 /paul/output/file output/depth_0m.dat
-/run/beamOn 50000
+/run/beamOn 20000
 /paul/output/close
 exit

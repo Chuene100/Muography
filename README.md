@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # paulsim — Geant4 simulation of the PAUL hodoscope
 
 Simulates the 3-plane, 64-strip-per-view scintillator telescope used in the
@@ -53,3 +54,72 @@ Use `depth_*m.dat` as labelled muon samples across overburden thicknesses to
 retrain the transmission surrogate on simulated transport instead of the
 analytic model (`muography/ml_models.py`), and `open_sky.dat` as a pure-muon
 positive class for the muon/noise classifier.
+=======
+# Muography — Geant4 + ML underground muon-flux mapping
+
+Simulate cosmic-ray muons travelling through rock overburden with **Geant4**
+(`muon-sim/`, the PAUL hodoscope telescope), then use **machine learning** to
+do what the detector alone cannot: instead of physically deploying the
+telescope at every underground location — which takes months of counting time
+— measure a *sparse* set of stations, train a Gaussian-process flux map, and
+predict the location with the **fewest muon hits** anywhere on the site.
+
+## Pipeline
+
+```
+Geant4 depth scan            transmission curve          GP flux map
+(muons through rock)   -->   trained on simulated  -->   from sparse,
+depth_0..1000 m .dat         transport, not just the     noisy deployments
+                             analytic range-energy model
+                                                          --> min-muon location
+```
+
+1. `scripts/run_depth_scan.sh` fires Gaisser-spectrum μ± through 0–1000 m of
+   rock onto the 3-plane strip telescope and writes PAUL-format `.dat` files.
+2. `analysis/predict_flux_map.py` builds a transmission curve from those
+   simulated samples (falls back to the analytic model if absent), creates a
+   synthetic site with uneven overburden, simulates sparse detector
+   deployments (Poisson counts over days), fits a GP over log-rate, and uses
+   active learning to pick each next station where uncertainty is largest.
+3. Outputs: `results/flux_prediction.json` + `analysis/figures/flux_map_prediction.png`
+   (true vs predicted maps, uncertainty map, convergence of the predicted
+   minimum location).
+
+## Docker (recommended)
+
+The image builds Geant4 11.3.0 from source (first build takes ~30–60 min),
+compiles `paulsim`, and ships the Python ML stack:
+
+```bash
+docker build -t muography .
+docker run --rm -v "$PWD/results:/opt/muography/results" \
+             -v "$PWD/analysis/figures:/opt/muography/analysis/figures" muography
+```
+
+Useful knobs and variants:
+
+```bash
+docker run --rm -e PAUL_EVENTS=50000 muography      # events per depth point
+docker run --rm -it muography bash                   # interactive shell
+docker run --rm muography ./build/paulsim macros/run_open.mac   # custom command
+```
+
+## Native (macOS) workflow
+
+```bash
+source Geant4-11.3.0-Darwin/bin/geant4.sh
+cmake --build muon-sim/build -j                      # paulsim already configured
+muon-sim/scripts/run_depth_scan.sh 20000
+.venv/bin/python analysis/predict_flux_map.py
+```
+
+## Layout
+
+| Path | Purpose |
+| --- | --- |
+| `muon-sim/` | Geant4 application (`paulsim`) + macros + depth-scan script |
+| `muography/survey.py` | site model, transmission curve, Poisson station simulation, GP fit, active learning, minimum search |
+| `muography/ml_models.py` | existing surrogates/classifiers for real PAUL data |
+| `analysis/predict_flux_map.py` | end-to-end flux-mapping driver |
+| `results/`, `analysis/figures/` | JSON summaries and figures |
+>>>>>>> 44846461 (Added predict_flux_map.py, dockerfile)

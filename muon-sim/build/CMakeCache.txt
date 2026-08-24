@@ -219,6 +219,9 @@ Fontconfig_INCLUDE_DIR:PATH=/opt/homebrew/Cellar/fontconfig/2.18.2/include
 //Path to a library.
 Fontconfig_LIBRARY:FILEPATH=/opt/homebrew/lib/libfontconfig.dylib
 
+//No help, variable specified on the command line.
+GEANT4_INSTALL_DATA:UNINITIALIZED=ON
+
 //The directory containing a CMake configuration file for Geant4.
 Geant4_DIR:PATH=/Users/chuene/Documents/Documents-Chuene/Muography/Geant4-11.3.0-Darwin/lib/cmake/Geant4
 
